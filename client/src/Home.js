@@ -18,7 +18,7 @@ const Home = () => {
           <div className='text-right font-bold text-[110px] mt-[300px] mr-[40px]'>
             <p>WELCOME TO<br></br><span className='text-[170px] relative bottom-[70px]'>CRUX</span><br></br></p>
             <div className='w-[520px] h-[50px] relative bottom-[160px] left-[10px] bg-button ml-auto -z-10'></div>
-            <div className='hover:bg-white hover:text-black duration-300 ease-out text-[28px] font-bold text-center w-[400px] border-4 border-button ml-auto rounded-[18px] relative left-[10px] bottom-[130px] py-[10px]'>START THE JOURNEY</div>
+            <div className='hover:bg-white hover:text-black duration-300 ease-out text-[28px] font-bold text-center w-[400px] border-4 border-button ml-auto rounded-[18px] relative left-[10px] bottom-[130px] py-[10px]'><Link to="/register">START THE JOURNEY</Link></div>
           </div>
         </div>
 
