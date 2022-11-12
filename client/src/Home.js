@@ -85,7 +85,7 @@ const Home = () => {
         
       </div>
 
-      <footer className='font-semibold bg-black flex justify-between min-w-[102.3%] px-[30px] py-[30px] rounded-[15px] relative right-[20px] top-[60px]'>
+      <footer className='font-semibold bg-black flex justify-between min-w-[101.2%] px-[30px] py-[30px] rounded-t-[15px] relative right-[20px] top-[60px]'>
         <p className='text-hmm'>@ZETA.Inc</p>
         <p className='text-hmm'>INBOUND 2022</p>
       </footer>
