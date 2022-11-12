@@ -27,9 +27,10 @@ const House = () => {
       <div className="grid grid-cols-4 ml-[140px]">
       <div className="w-[298px] h-[350px] bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="-mt-[45px]">
-            <img src={rumah1} alt="rumah1" className="h-[306px]"></img>
+            <img src={rumah1} alt="rumah1" className="h-[276px]"></img>
           </div>
-          <div className="font-bold text-[30px]">ABC WISS</div>
+
+          <div className="font-bold text-[30px] mt-[30px]">ABC WISS</div>
           <div className="flex text-[14px]">Zeta street AA-01</div>
         </div>
 
@@ -43,27 +44,27 @@ const House = () => {
 
         <div className="w-[298px] h-[350px] bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="-mt-[45px]">
-            <img src={rumah3} alt="rumah3" className="h-[306px]"></img>
+            <img src={rumah3} alt="rumah3" className="h-[275px]"></img>
           </div>
-          <div className="font-bold text-[30px]">AZDAY 67</div>
+          <div className="font-bold text-[30px] mt-[30px]">AZDAY 67</div>
           <div className="flex text-[14px]">CC-RUX 4562.65</div>
         </div>
 
         <div className="w-[298px] h-[350px] bg-hmm rounded-[60px] flex flex-col items-center">
-          <div className="-mt-[45px]">
-            <img src={rumah4} alt="rumah4" className="h-[306px]"></img>
+          <div className="-mt-[45px] scale-125 ">
+            <img src={rumah4} alt="rumah4" className=" w-[346px]"></img>
           </div>
           <div className="font-bold text-[30px]">WILLHOUSE</div>
           <div className="flex text-[14px]">IO-08112022</div>
         </div>
       </div>
 
-      <div className="ml-[140px] w-[1103px] bg-hmm rounded-2xl mt-[96px] px-[58px] pt-[38px] pb-[65px]">
+      <div className="ml-[140px] w-[1323px] bg-hmm rounded-2xl mt-[96px] px-[58px] pt-[38px] pb-[65px]">
         <div className="font-bold text-[45px] -left-[18px] mb-[49px]">
           Maps
         </div>
         <div className="">
-          <img src={peta} alt="peta" className=" w-[80%] object-contain"></img>
+          <img src={peta} alt="peta" className=" w-[100%] object-contain"></img>
         </div>
       </div>
 
