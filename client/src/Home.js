@@ -13,7 +13,7 @@ const Home = () => {
       
       <img src={planet} alt="planet" className='absolute w-[3000px] top-[-550px] left-[-900px] -z-10'></img>
 
-      <div className='border-hmm border-[3px] rounded-[20px] mt-[20px] pt-[110px]'>
+      <div className='border-hmm border-[3px] rounded-[20px] mt-[20px] mx-[20px] pt-[110px]'>
         <div className='flex justify-end'>
           <div className='text-right font-bold text-[110px] mt-[300px] mr-[40px]'>
             <p>WELCOME TO<br></br><span className='text-[170px] relative bottom-[70px]'>CRUX</span><br></br></p>
