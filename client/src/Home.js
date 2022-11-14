@@ -6,7 +6,7 @@ import orangOrang from "./Assets/Homepage/🦆 emoji _people holding hands_ ligh
 const Home = () => {
   return ( 
     <div>
-      <div className="rounded-[38px] bg-hmm flex items-center py-[12px] px-[26px] opacity-80 shadow-md">
+      <div className="rounded-[38px] bg-hmm flex items-center mx-[20px] mt-[20px] py-[12px] px-[26px] opacity-80 shadow-md">
         <p className="text-[26px] text-white font-bold opacity-100">STATISTICRUX</p>
         <div className="bg-button hover:bg-white hover:text-button duration-300 ease-out py-[7px] px-[20px] rounded-[20px] h-[55px] ml-auto pb-[7px] opacity-100"><Link to="/login" className="font-bold text-[24px] relative top-[3px]">LOGIN</Link></div>
       </div>
@@ -63,7 +63,7 @@ const Home = () => {
                 <p className="font-bold text-[55px] text-center">POPULATION</p>
                 <p className="text-button font-bold text-[140px] text-center leading-[165px]">11,103</p>
               </div>
-              <div className="min-w-[40%] bg-hmm rounded-[50px] py-[50px] px-[50px] mr-[100px]">
+              <div className="min-w-[42%] bg-hmm rounded-[50px] py-[50px] px-[50px] mr-[100px]">
                 <p className="font-bold text-[55px] text-left leading-[65px]">OXYGEN LEVEL</p>
                 <p className="text-button font-bold text-[140px] text-center leading-[165px]">25%</p>
               </div>
