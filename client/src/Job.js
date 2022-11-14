@@ -5,9 +5,10 @@ const Job = () => {
   return ( 
     <div>
       <Navbar />
-      <div className="py-[100px] text-center">
-        <h1 className="font-bold text-button text-[120px]">JOBS</h1>
-        <p className="text-[55px]">Back to <Link to="/" className="border-b-8 border-button">Home</Link></p>
+      <div className="pl-[11.67%] pr-[5%] mt-[8vh]">
+        <p>Job</p>
+        <div></div>
+        <hr className="border-button border-[2px]"></hr>
       </div>
     </div>
    );
