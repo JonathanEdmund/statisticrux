@@ -8,7 +8,7 @@ const Login  = () => {
         <form className='mx-auto'>
         <img src={earth} alt="earth" className='absolute w-[880px] top-[50px] left-[900px] -z-10'></img>
                 <div className='w-[370px] h-[30px] relative top-[130px] right-[1050px] bg-button ml-auto -z-10'></div>
-                <h1 className='text-white font-bold text-button text-[100px]'>LOG IN</h1>
+                <h1 className='text-white font-bold text-[100px]'>LOG IN</h1>
                 <h4 className='text-white text-[35px]'>Do not have account? <Link to="/Register" className='italic font-bold text-button text-[35px]'>Sign Up</Link></h4>
                 <br></br>
                 <div className='felx flex-col mb-4'>

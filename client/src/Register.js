@@ -8,7 +8,7 @@ const Register  = () => {
         <form className='mx-auto'>
         <img src={earth} alt="earth" className='absolute w-[880px] top-[50px] left-[900px] -z-10'></img>
                 <div className='w-[1100px] h-[30px] relative top-[130px] right-[320px] bg-button ml-auto -z-10'></div>
-                <h1 className='text-white font-bold text-button text-[100px]'>Create Your Account</h1>
+                <h1 className='text-white font-bold text-[100px]'>Create Your Account</h1>
                 <h4 className='text-white text-[35px]'>Already have account? <Link to="/Login" className='italic font-bold text-button text-[35px]'>Log In</Link></h4>
                 <br></br>
                 <div className='grid grid-cols-2 gap-3 w-[770px]'>
