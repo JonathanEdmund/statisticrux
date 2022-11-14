@@ -33,7 +33,7 @@ const Register  = () => {
                 </div>
                 </div>
                 <br></br>
-                <div className='hover:bg-white hover:text-black duration-300 ease-out text-[35px] font-bold text-center border-2 border-button w-[300px] rounded-[10px]'><Link to='/dashboard'>SIGN UP</Link></div>
+                <div className='hover:bg-white hover:text-black duration-300 ease-out text-[35px] font-bold text-center border-2 border-button w-[300px] rounded-[10px]'><Link to='/login'>SIGN UP</Link></div>
                 <br></br>
         </form>
     </div>
