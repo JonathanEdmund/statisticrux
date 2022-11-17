@@ -6,13 +6,8 @@ const Register  = () => {
     return (
     <div className='bg-hmm bg-opacity-70 m-[60px] px-[50px] pb-[50px] rounded-[35px] shadow-5xl text-left'>
         <form className='mx-auto'>
-        {/* <img src={earth} alt="earth" className='absolute w-[880px] top-[50px] left-[900px] -z-10'></img> */}
-
-        <div className="overflow-hidden absolute right-0 w-[880px] h-full top-[20px] -z-10">
-            <img src={earth} alt="earth" className='absolute w-[880px] top-[200px] left-[200px]'></img>
-        </div>
-
-                <div className='w-[1100px] h-[30px] relative top-[130px] right-[320px] bg-button ml-auto -z-10'></div>
+        <img src={earth} alt="earth" className='absolute w-[880px] top-[50px] left-[900px] -z-10'></img>
+                <div className='w-[1100px] h-[30px] relative top-[130px] bg-button -z-10'></div>
                 <h1 className='text-white font-bold text-[100px]'>Create Your Account</h1>
                 <h4 className='text-white text-[35px]'>Already have account? <Link to="/Login" className='italic font-bold text-button text-[35px]'>Log In</Link></h4>
                 <br></br>
