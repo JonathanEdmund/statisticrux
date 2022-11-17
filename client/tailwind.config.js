@@ -21,6 +21,7 @@ module.exports = {
       },
 
       gridRow: {
+        'start-7': '7',
         'start-9': '9',
         'start-11': '11',
         'start-13': '13',

@@ -7,7 +7,7 @@ const Login  = () => {
     <div className='bg-hmm bg-opacity-70 m-[60px] p-[50px] rounded-[35px] shadow-5xl text-left'>
         <form className='mx-auto'>
         <img src={earth} alt="earth" className='absolute w-[880px] top-[50px] left-[900px] -z-10'></img>
-                <div className='w-[370px] h-[30px] relative top-[130px] right-[1050px] bg-button ml-auto -z-10'></div>
+                <div className='w-[370px] h-[30px] relative top-[130px] bg-button -z-10'></div>
                 <h1 className='text-white font-bold text-[100px]'>LOG IN</h1>
                 <h4 className='text-white text-[35px]'>Do not have account? <Link to="/Register" className='italic font-bold text-button text-[35px]'>Sign Up</Link></h4>
                 <br></br>
