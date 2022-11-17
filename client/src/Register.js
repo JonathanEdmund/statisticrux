@@ -5,8 +5,10 @@ import earth from "./Assets/Login-Sign Up/Populated_Planet.png";
 const Register  = () => {
     return (
     <div className='bg-hmm bg-opacity-70 m-[60px] px-[50px] pb-[50px] rounded-[35px] shadow-5xl text-left'>
+        <div className="absolute -mt-[60px] h-[140%] w-[800px] right-0 overflow-hidden">
+            <img src={earth} alt="earth" className='absolute w-[880px] top-[140px] left-[200px] -z-10'></img>
+        </div>
         <form className='mx-auto'>
-        <img src={earth} alt="earth" className='absolute w-[880px] top-[50px] left-[900px] -z-10'></img>
                 <div className='w-[1100px] h-[30px] relative top-[130px] bg-button -z-10'></div>
                 <h1 className='text-white font-bold text-[100px]'>Create Your Account</h1>
                 <h4 className='text-white text-[35px]'>Already have account? <Link to="/Login" className='italic font-bold text-button text-[35px]'>Log In</Link></h4>
