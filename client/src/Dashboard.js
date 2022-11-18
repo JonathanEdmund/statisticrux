@@ -3,48 +3,55 @@ import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-  // const [firstname, setFirstName] = useState("");
-  // const [lastname, setLastName] = useState("");
-  // const [username, setUsername] = useState("");
-  // const [date, setDate] = useState("");
-  // const [age, setAge] = useState("");
-  // const [id, setId] = useState("");
-
-  // const user = { firstname, lastname, username, date, age, id };
-  // const APIendpoint = "";
   const user = useSelector((state) => state.auth.user);
+  const username = useSelector((state) => state.auth.username);
+  const [userData, setUserData] = useState();
 
   const firstNameRef = useRef();
   const lastNameRef = useRef();
   const usernameRef = useRef();
   const dateRef = useRef();
-  const ageRef = useRef();
-  const idRef = useRef();
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!user) {
       navigate("/login");
     }
-  }, [navigate, user]);
+
+    if (user) {
+      fetch(`/api/auth/${username}`)
+        .then((response) => response.json())
+        .then((data) => {
+          setUserData(data.user);
+
+          const date = new Date(data.user.dateOfBirth);
+          dateRef.current.defaultValue = `${date.getFullYear()}-${`0${date.getMonth()}`.slice(
+            -2
+          )}-${`0${date.getDate()}`.slice(-2)}`;
+        });
+    }
+  }, [navigate, user, username]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // update
-    // fetch(APIendpoint, {
-    //   method: "POST",
-    //   headers: {"Content-Type" : "application/json"},
-    //   body: JSON.stringify(user)
-    // });
+    // update user info
     const input = {
       firstName: firstNameRef.current.value,
       lastName: lastNameRef.current.value,
-      username: usernameRef.current.value,
-      date: dateRef.current.value,
-      age: ageRef.current.value,
-      globalId: idRef.current.value,
+      newUsername: usernameRef.current.value,
+      dateOfBirth: dateRef.current.value,
     };
     console.log(input);
+
+    fetch(`/api/auth/${username}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(input),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUserData(data.user);
+      });
   };
 
   return (
@@ -55,7 +62,7 @@ const Dashboard = () => {
           className="w-[50%] pt-[46%] mx-auto rounded-[50%] border-hmm border-2"
         ></img>
         <p className="font-bold text-[40px] text-center leading-none mt-[10px]">
-          Hai First Name!
+          Hai {userData?.firstName}!
         </p>
         <form
           onSubmit={handleSubmit}
@@ -73,10 +80,12 @@ const Dashboard = () => {
             placeholder="Naruto"
             className="bg-black rounded-[16px] m-[10px] p-[11px] col-span-6 placeholder:font-bold placeholder:text-hmm"
             ref={firstNameRef}
+            defaultValue={userData?.firstName}
           ></input>
           <input
             placeholder="Uchiha"
             className="bg-black rounded-[16px] m-[10px] p-[11px] col-span-6 placeholder:font-bold placeholder:text-hmm"
+            defaultValue={userData?.lastName}
             ref={lastNameRef}
           ></input>
           <div className="flex justify-start pl-[4%] mt-[2px] col-span-12">
@@ -87,6 +96,7 @@ const Dashboard = () => {
           <input
             placeholder="narto"
             className="bg-black rounded-[16px] m-[10px] p-[11px] col-span-12 w-[96%] placeholder:font-bold placeholder:text-hmm"
+            defaultValue={userData?.username}
             ref={usernameRef}
           ></input>
           <div className="flex justify-start pl-[4%] mt-[2px] col-span-12">
@@ -101,12 +111,11 @@ const Dashboard = () => {
             className="bg-black rounded-[16px] m-[10px] p-[11px] col-span-9 placeholder:font-bold placeholder:text-hmm"
             ref={dateRef}
           ></input>
-          <input
-            type="number"
-            placeholder="-7"
-            className="bg-black rounded-[16px] m-[10px] p-[11px] col-span-3 placeholder:font-bold placeholder:text-hmm"
-            ref={ageRef}
-          ></input>
+          <div className="bg-black rounded-[16px] m-[10px] p-[11px] col-span-3 placeholder:font-bold placeholder:text-hmm">
+            {userData?.dateOfBirth &&
+              new Date().getFullYear() -
+                new Date(userData.dateOfBirth).getFullYear()}
+          </div>
           <div className="col-span-12 flex justify-start pl-[4%] mt-[2px]">
             <p className="font-bold text-[20px] leading-none mr-[50%]">
               Global ID Number
@@ -115,7 +124,8 @@ const Dashboard = () => {
           <input
             placeholder="1234569420"
             className="bg-black rounded-[16px] m-[10px] p-[11px] col-span-12 placeholder:font-bold placeholder:text-hmm"
-            ref={idRef}
+            defaultValue={userData?._id}
+            // ref={idRef}
           ></input>
           <button
             type="submit"

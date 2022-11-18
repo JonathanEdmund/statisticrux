@@ -60,7 +60,7 @@ export const login = (input) => {
 export const register = (input) => {
   return async (dispatch) => {
     dispatch(setLoading());
-
+    console.log(input);
     const sendRequest = async (input) => {
       const response = await fetch("/api/auth/register", {
         method: "POST",

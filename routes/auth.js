@@ -15,8 +15,7 @@ const router = express.Router();
 
 router.route("/register").post(async (req, res) => {
   try {
-    const { username, password } = req.body;
-    console.log(username);
+    const { username, password, firstName, lastName } = req.body;
 
     if (!(username || password)) {
       throw new Error("Incomplete registration form!");
@@ -34,6 +33,8 @@ router.route("/register").post(async (req, res) => {
     const newUser = new User({
       username: username,
       password: hashedPassword,
+      firstName,
+      lastName,
     });
 
     await newUser.save();
@@ -87,5 +88,51 @@ router.route("/login").post(async (req, res) => {
     res.json({ status: false, message: error.message });
   }
 });
+
+router
+  .route("/:username")
+  .get(parseCookie, authenticateToken, async (req, res) => {
+    try {
+      const { userId } = req.user;
+      const { username } = req.params;
+      const user = await User.findById(userId);
+
+      if (!user) {
+        throw new Error("User not found!");
+      }
+
+      if (user.username !== username) {
+        throw new Error("Username and id doesn't match");
+      }
+
+      res.json({ status: true, message: "User found!", user });
+    } catch (error) {
+      res.json({ status: false, message: error.message });
+    }
+  })
+  .patch(parseCookie, authenticateToken, async (req, res) => {
+    try {
+      const { userId } = req.user;
+      const { username } = req.params;
+      const { firstName, lastName, newUsername, dateOfBirth } = req.body;
+
+      if (username !== newUsername) {
+        const duplicateUser = await User.findOne({ username: newUsername });
+        if (duplicateUser)
+          throw new Error("New username has already been taken!");
+      }
+
+      const user = await User.findByIdAndUpdate(userId, {
+        $set: { firstName, lastName, username: newUsername, dateOfBirth },
+      });
+      if (!user) {
+        throw new Error("User not found!");
+      }
+
+      res.json({status: true, message: "Successfully updated the user!", user});
+    } catch (error) {
+      res.json({ status: false, message: error.message });
+    }
+  });
 
 export default router;

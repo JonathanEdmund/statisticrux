@@ -10,6 +10,8 @@ const Register = () => {
 
   const userRef = useRef();
   const passwordRef = useRef();
+  const firstNameRef = useRef();
+  const lastNameRef = useRef();
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -21,6 +23,8 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const input = {
+      firstName: firstNameRef.current.value,
+      lastName: lastNameRef.current.value,
       username: userRef.current.value,
       password: passwordRef.current.value,
     };
@@ -59,11 +63,13 @@ const Register = () => {
           <input
             className="bg-black left-[50px] w-[310px] h-[40px] rounded-[16px] placeholder:font-bold placeholder:text-hmm py-1 px-2"
             type="text"
+            ref={firstNameRef}
             placeholder="Budi"
           />
           <input
             className="bg-black left-[50px] w-[310px] h-[40px] rounded-[16px] placeholder:font-bold placeholder:text-hmm py-1 px-2"
             type="text"
+            ref={lastNameRef}
             placeholder="Pekerti"
           />
         </div>
