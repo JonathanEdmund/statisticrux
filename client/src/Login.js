@@ -5,7 +5,7 @@ import earth from "./Assets/Login-Sign Up/Populated_Planet.png";
 const Login  = () => {
     return (
     <div className='bg-hmm bg-opacity-70 m-[60px] p-[50px] rounded-[35px] shadow-5xl text-left'>
-        <div className="absolute -mt-[110px] h-[125%] w-[800px] right-0 overflow-hidden">
+        <div className="absolute -mt-[110px] h-[100%] w-[800px] right-0 overflow-hidden">
             <img src={earth} alt="earth" className='absolute w-[880px] top-[140px] left-[200px] -z-10'></img>
         </div>
         <form className='mx-auto'>
