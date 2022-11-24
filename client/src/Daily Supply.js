@@ -52,12 +52,7 @@ const DailySupply = () => {
           </div>
         </Link>
       </div>
-      <div className="py-[100px] text-center">
-        <h1 className="font-bold text-button text-[120px]">DAILY SUPPLIES</h1>
-        <p className="text-[55px]">Back to <Link to="/" className="border-b-8 border-button">Home</Link></p>
-      </div>
-
-      <div className="ml-[140px]">
+      <div className="ml-[140px] mt-[40px]">
         <div className="font-bold text-white text-[55px]">Daily Supply</div>
         <div className='w-[375px] min-h-[26px] relative bottom-[34px] left-[0px] bg-button mr-auto -z-10'></div>
         <div className="text-white text-[30px] mt-[-20px] mb-[36px]">What would you like to claim today?</div>
@@ -67,7 +62,7 @@ const DailySupply = () => {
 
       <div className="font-bold text-white text-[40px] ml-[140px] mb-[38px]">RECOMMENDATION</div>
       <div className="grid grid-cols-4 ml-[140px] gap-x-[45px] pr-[100px]">
-        <div className="max-w-[319px] min-h-[279px] bg-hmm rounded-[60px] flex flex-col items-center">
+        <div className="max-w-[319px] min-h-[279px] hover:bg-button duration-300 ease-out bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="m-auto">
             <img src={oxygen} alt="oxygen" className="max-h-[165px]"></img>
           </div>
@@ -75,7 +70,7 @@ const DailySupply = () => {
           <div className="flex text-[18px] mb-[23px]">2 liter</div>
         </div>
 
-        <div className="max-w-[319px] min-h-[279px] bg-hmm rounded-[60px] flex flex-col items-center">
+        <div className="max-w-[319px] min-h-[279px] hover:bg-button duration-300 ease-out bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="m-auto">
             <img src={egg} alt="egg" className="max-h-[165px]"></img>
           </div>
@@ -83,7 +78,7 @@ const DailySupply = () => {
           <div className="flex text-[18px] mb-[23px]">Cow egg</div>
         </div>
 
-        <div className="max-w-[319px] min-h-[279px] bg-hmm rounded-[60px] flex flex-col items-center">
+        <div className="max-w-[319px] min-h-[279px] hover:bg-button duration-300 ease-out bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="m-auto">
             <img src={water} alt="water" className="max-h-[165px]"></img>
           </div>
@@ -91,7 +86,7 @@ const DailySupply = () => {
           <div className="flex text-[18px] mb-[23px]">Sparkling Water</div>
         </div>
 
-        <div className="max-w-[319px] min-h-[279px] bg-hmm rounded-[60px] flex flex-col items-center">
+        <div className="max-w-[319px] min-h-[279px] hover:bg-button duration-300 ease-out bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="m-auto">
             <img src={banana} alt="banana" className="max-h-[165px]"></img>
           </div>
@@ -101,8 +96,8 @@ const DailySupply = () => {
       </div>
 
       <div className="font-bold text-white text-[40px] ml-[140px] mt-[79px] mb-[53px]">AVAILABLE SUPPLY</div>
-      <div className="max-w-[85%] max-h-[441px] bg-button rounded-[20px] ml-[140px] mr-[100px]">
-      <div className="flex overflow-x-auto scroll scroll-smooth py-[36px] px-[49px]">
+      <div className="max-w-[85%] max-h-[441px] bg-button rounded-[20px] ml-[140px] mb-[100px] mr-[100px]">
+      <div className="flex overflow-x-auto scroll scroll-smooth scrollbar-hide py-[36px] px-[49px]">
         <div className="min-w-[250px] h-[370px] bg-hmm rounded-[60px] mx-[11px] flex flex-col items-center">
           <div className="my-auto">
             <img src={bigmac} alt="bigmac" className="max-h-[265px]"></img>

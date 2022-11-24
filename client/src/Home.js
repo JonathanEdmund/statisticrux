@@ -57,7 +57,7 @@ const Home = () => {
           {/* carousel */}
           <div className='mt-[70px]'>
             {/* carousel components */}
-            <div className="flex overflow-x-auto scroll scroll-smooth scrollbar pb-[40px] mx-[50px] mb-[40px] scale-75">
+            <div className="flex overflow-x-auto scroll scroll-smooth scrollbar pb-[40px] mx-[50px] mb-[40px] scale-90">
               <div className="min-w-[50%] bg-hmm rounded-[50px] py-[50px] mr-[100px]">
                 <img src={orangOrang} alt="orang-orang" className='w-[60%] mx-auto'></img>
                 <p className="font-bold text-[55px] text-center">POPULATION</p>

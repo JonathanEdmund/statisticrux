@@ -46,12 +46,8 @@ const House = () => {
           </div>
         </Link>
       </div>
-      <div className="py-[100px] text-center">
-        <h1 className="font-bold text-button text-[120px]">HOUSES</h1>
-        <p className="text-[55px]">Back to <Link to="/" className="border-b-8 border-button">Home</Link></p>
-      </div>
 
-      <div className="ml-[140px] ">
+      <div className="ml-[140px] mt-[40px]">
         <div className="font-bold text-white text-[55px]">House</div>
         <div className='w-[200px] h-[26px] relative bottom-[40px] left-[0px] bg-button mr-auto -z-10'></div>
         <div className="text-white text-[30px] -mt-[32px] mb-[36px]">Choose your house wisely!</div>
@@ -60,7 +56,7 @@ const House = () => {
       <div className="bg-button h-[5px] w-[100%] mb-[80px]"></div>
 
       <div className="grid grid-cols-4 ml-[140px]">
-      <div className="w-[298px] h-[350px] bg-hmm rounded-[60px] flex flex-col items-center">
+      <div className="w-[298px] h-[350px] hover:bg-button duration-300 ease-out bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="-mt-[45px]">
             <img src={rumah1} alt="rumah1" className="h-[276px]"></img>
           </div>
@@ -69,7 +65,7 @@ const House = () => {
           <div className="flex text-[14px]">Zeta street AA-01</div>
         </div>
 
-        <div className="w-[298px] h-[350px] bg-hmm rounded-[60px] flex flex-col items-center">
+        <div className="w-[298px] h-[350px] hover:bg-button duration-300 ease-out bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="-mt-[45px]">
             <img src={rumah2} alt="rumah2" className="h-[306px]"></img>
           </div>
@@ -77,7 +73,7 @@ const House = () => {
           <div className="flex text-[14px]">Road Map 00E2</div>
         </div>
 
-        <div className="w-[298px] h-[350px] bg-hmm rounded-[60px] flex flex-col items-center">
+        <div className="w-[298px] h-[350px] hover:bg-button duration-300 ease-out bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="-mt-[45px]">
             <img src={rumah3} alt="rumah3" className="h-[275px]"></img>
           </div>
@@ -85,7 +81,7 @@ const House = () => {
           <div className="flex text-[14px]">CC-RUX 4562.65</div>
         </div>
 
-        <div className="w-[298px] h-[350px] bg-hmm rounded-[60px] flex flex-col items-center">
+        <div className="w-[298px] h-[350px] hover:bg-button duration-300 ease-out bg-hmm rounded-[60px] flex flex-col items-center">
           <div className="-mt-[45px] scale-125 ">
             <img src={rumah4} alt="rumah4" className=" w-[346px]"></img>
           </div>
