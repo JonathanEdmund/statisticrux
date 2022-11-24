@@ -1,4 +1,10 @@
 import { Link } from "react-router-dom";
+import architect from './Assets/Job/Architect-rafiki.png'
+import farmer from './Assets/Job/Farmer-amico.png'
+import doctor from './Assets/Job/Doctor-pana.png'
+import teacher from './Assets/Job/Formula-pana.png'
+import journalist from './Assets/Job/Journalist-pana.png'
+
 
 
 
@@ -54,33 +60,38 @@ const Job = () => {
       </div>
       <div className="">
       <div className="bg-button ml-[150px] mr-[70px] rounded-[20px]">
-        <div className="flex overflow-x-auto scroll scroll-smooth scrollbar-hide pb-[40px] pt-[40px] px-[60px]">
-                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] ml-[10px] mr-[10px]">
+        <div className="flex overflow-x-auto scroll scroll-smooth scrollbar-hide">
+                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] scale-75">
                   <p className="font-bold text-[55px] text-center">Doctor</p>
+                  <img src={doctor} alt='doctor'></img>
                   <p className="font-bold text-[25px] text-center">Full time</p>
                   <div className="mt-[61px]">
                   </div>
                   <p className="text-button font-bold text-[140px] text-center leading-[165px]"></p>
                 </div>
-                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] ml-[10px] mr-[10px]">
+                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] scale-75">
                   <p className="font-bold text-[55px] text-center ">Farmer</p>
+                  <img src={farmer} alt='doctor'></img>
                   <p className="font-bold text-[25px] text-center ">Full time</p>
                   <div className="mt-[61px]">
                   </div>
                   <p className="text-button font-bold text-[57px] text-center leading-[165px]"></p>
                 </div>
-                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] ml-[10px] mr-[10px]">
+                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] scale-75">
                   <p className="font-bold text-[55px] text-center ">Teacher</p>
+                  <img src={teacher} alt='doctor'></img>
                   <p className="font-bold text-[25px] text-center ">Full time</p>
                   <p className="text-button font-bold text-[100px] text-center leading-[165px]"></p>
                 </div>
-                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] ml-[10px] mr-[10px]">
+                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] scale-75">
                   <p className="font-bold text-[55px] text-center">Architect</p>
+                  <img src={architect} alt='doctor'></img>
                   <p className="font-bold text-[25px] text-center ">Full time</p>
                   <p className="text-button font-bold text-[140px] text-center leading-[165px]"></p>
                 </div>
-                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] ml-[10px] mr-[10px] ">
+                <div className="min-w-[40%] bg-hmm bg-opacity-80 rounded-[50px] py-[50px] px-[50px] scale-75 ">
                   <p className="font-bold text-[55px] text-center">Journalist</p>
+                  <img src={journalist} alt='doctor'></img>
                   <p className="font-bold text-[25px] text-center">Full time</p>
                   <p className="text-button font-bold text-[140px] text-center leading-[165px]"></p>
                 </div>
